@@ -642,6 +642,53 @@ footer .bottom .social-media a:hover {
 
 
 
+/* LOADER */
+.loader {
+	position: fixed;
+	z-index: 2000;
+	background: var(--light);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s ease;
+	opacity: 1;
+	visibility: visible;
+}
+.loader.hide {
+	opacity: 0;
+	visibility: hidden;
+}
+.loader span {
+	color: var(--dark-blue);
+	font-weight: 500;
+	font-size: 24px;
+	margin: 0 2px;
+	border-bottom: 3px solid var(--dark-blue);
+	position: relative;
+	bottom: 0;
+	animation: loading 1s calc(var(--i) * .1s) ease-in-out infinite;
+}
+
+
+
+@keyframes loading {
+	0%, 100% {
+		border-bottom-width: 3px;
+		bottom: 0;
+	}
+	50% {
+		border-bottom-width: 28px;
+		bottom: 14px;
+	}
+}
+/* LOADER */
+
+
+
 
 
 
