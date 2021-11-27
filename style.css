@@ -283,7 +283,7 @@ header .btn-group .btn-work:active {
 	flex-wrap: wrap;
 }
 #skills .skills .skill {
-	width: 120px;
+	flex: 1 1 120px;
 	height: 120px;
 	display: flex;
 	justify-content: center;
