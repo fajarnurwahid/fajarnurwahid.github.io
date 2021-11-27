@@ -276,14 +276,11 @@ header .btn-group .btn-work:active {
 	margin-bottom: .75rem;
 }
 #skills .skills {
-	display: flex;
-	justify-content: flex-start;
+	display: grid;
 	grid-gap: 20px;
-	align-items: center;
-	flex-wrap: wrap;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
 #skills .skills .skill {
-	flex: 1 1 120px;
 	height: 120px;
 	display: flex;
 	justify-content: center;
@@ -292,9 +289,6 @@ header .btn-group .btn-work:active {
 	font-size: 5rem;
 	border-radius: 4px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, .05);
-}
-#skills .container > div:not(:last-child) {
-	margin-bottom: 2rem;
 }
 /* SKILLS */
 
