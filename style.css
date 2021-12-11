@@ -128,8 +128,7 @@ header {
 	background: var(--blue);
 }
 header .container {
-	padding: 3rem 1.25rem;
-	min-height: calc(100vh - 4rem);
+	padding: 2.5rem 1.25rem;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
