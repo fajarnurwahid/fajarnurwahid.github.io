@@ -1,227 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Fajar Nur Wahid">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Fajar Nur Wahid">
 	<meta name="description" content="Fajar Nur Wahid - Web Developer And Web Designer">
-
-	<!-- Favicon -->
+    <!-- Favicon -->
 	<link rel="shortcut icon" type="image" href="img/favicon.ico"/>
-
-	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="style.css">
-	<title>Fajar Nur Wahid</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Fajar Nur Wahid</title>
 </head>
 <body>
 
-	<!-- NAVBAR -->
-	<nav>
-		<div class="container">
-			<a href="#" class="logo"><img src="img/logo_white.png" alt="Logo"></a>
-			<ul class="nav-menu">
-				<li><a href="#header">Home</a></li>
-				<li><a href="#works">Works</a></li>
-				<li><a href="#skills">Skills</a></li>
-				<li><a href="#certificate">Certificate</a></li>
-				<li><a href="mailto:fajarnurwahid12@gmail.com?subject=Let's collaborate" class="contact">Contact</a></li>
-			</ul>
-			<i class="bx bx-menu toggle-menu"></i>
-		</div>
-	</nav>
-	<!-- NAVBAR -->
+    <!-- NAVBAR -->
+    <nav>
+        <div class="container">
+            <div class="navbar-wrapper">
+                <a href="#" class="navbar-logo">
+                    <img src="img/logo.webp" alt="Logo">
+                </a>
+                <div class="navbar-menu-wrapper">
+                    <ul class="navbar-menu">
+                        <li>
+                            <a href="#" class="navbar-menu-item active">Home</a>
+                        </li>
+                        <li>
+                            <a href="#works" class="navbar-menu-item">Works</a>
+                        </li>
+                        <li>
+                            <a href="#skills" class="navbar-menu-item">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#certificates" class="navbar-menu-item">Certificates</a>
+                        </li>
+                    </ul>
+                    <a href="mailto:fajarnurwahid12@gmail.com?subject=Let's collaborate" class="btn btn-blue">Contact Me</a>
+                </div>
+                <label for="mode" class="navbar-mode-toggle">
+                    <input type="checkbox" id="mode" class="navbar-mode-checkbox">
+                    <span class="navbar-mode-toggle-switch"></span>
+                </label>
+                <span class="navbar-menu-toggle">
+                    <i class='bx bx-menu-alt-right' ></i>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR -->
 
-	<!-- HEADER -->
-	<header id="header">
-		<div class="container">
-			<h1>I’m <span>Fajar Nur Wahid</span></h1>
-			<h1>Web Developer And Web Designer</h1>
-			<p>Programming and design are my hobbies. As a web developer and web designer, I always combine creativity and problem solving to build a quality website.</p>
-			<div class="btn-group">
-				<a href="#works" class="btn-work">My Work</a>
-				<div>
-					<a href="https://youtube.com/c/FajarStd"><i class="bx bxl-youtube"></i></a>
-					<a href="https://github.com/fajarnurwahid"><i class="bx bxl-github"></i></a>
-					<a href="https://codepen.io/fajarnurwahid"><i class="bx bxl-codepen"></i></a>
-					<a href="https://www.facebook.com/fajar.nurwahid.984"><i class="bx bxl-facebook"></i></a>
-				</div>
-			</div>
-		</div>
-	</header>
-	<!-- HEADER -->
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <h1 class="header-title">Combine creativity and problem solving to build quality website</h1>
+            <p class="header-description">Hi, my name is Fajar Nur Wahid a Web Developer. I’m from Indonesia. Programming are my hobbies. As a web developer, I always combine creativity and problem solving to build a quality website.</p>
+            <div class="header-action">
+                <a href="#works" class="btn btn-blue">My Works</a>
+                <div class="header-action-link">
+                    <a href="https://youtube.com/c/FajarStd" class="header-action-link-item"><i class='bx bxl-youtube' ></i></a>
+                    <a href="https://github.com/fajarnurwahid" class="header-action-link-item"><i class='bx bxl-github' ></i></a>
+                    <a href="https://codepen.io/fajarnurwahid" class="header-action-link-item"><i class='bx bxl-codepen' ></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER -->
 
-	<!-- WORKS -->
-	<section id="works">
-		<div class="container">
-			<h1 class="title">My Works</h1>
-			<div class="works">
-				<a href="https://fashion-tailwindcss.netlify.app/" class="work" target="_blank">
-					<img src="img/fashion.webp" alt="Resto">
-					<h3>Fashion - Responsive Fashion Landing Page</h3>
-					<div class="tech">
-						<span>html</span>
-						<span>tailwind css</span>
-						<span>javascript</span>
-					</div>
-				</a>
-				<a href="https://fajarnurwahid.github.io/dotour/" class="work" target="_blank">
-					<img src="img/dotour.webp" alt="Resto">
-					<h3>DoTour - Responsive Travel Landing Page</h3>
-					<div class="tech">
-						<span>html</span>
-						<span>css</span>
-						<span>javascript</span>
-					</div>
-				</a>
-				<a href="https://fajarnurwahid.github.io/resto/" class="work" target="_blank">
-					<img src="img/resto.webp" alt="Resto">
-					<h3>Resto - Responsive Restaurant Landing Page</h3>
-					<div class="tech">
-						<span>html</span>
-						<span>css</span>
-						<span>javascript</span>
-					</div>
-				</a>
-				<a href="https://fajarnurwahid.github.io/adminweb/" class="work" target="_blank">
-					<img src="img/adminweb.webp" alt="Adminweb">
-					<h3>Adminweb - Responsive Admin Dashboard</h3>
-					<div class="tech">
-						<span>html</span>
-						<span>css</span>
-						<span>javascript</span>
-					</div>
-				</a>
-				<a href="https://fajarnurwahid.github.io/bloga/" class="work" target="_blank">
-					<img src="img/bloga.webp" alt="Bloga">
-					<h3>Bloga - Responsive Blog Web Site</h3>
-					<div class="tech">
-						<span>html</span>
-						<span>css</span>
-						<span>javascript</span>
-					</div>
-				</a>
-				<a href="https://fajarnurwahid.github.io/admin-site/" class="work" target="_blank">
-					<img src="img/adminsite.webp" alt="AdminSite">
-					<h3>AdminSite - Responsive Admin Dashboard</h3>
-					<div class="tech">
-						<span>html</span>
-						<span>css</span>
-						<span>javascript</span>
-					</div>
-				</a>
-				<a href="https://fajarnurwahid.github.io/adminhub/" class="work" target="_blank">
-					<img src="img/adminhub.webp" alt="AdminHub">
-					<h3>AdminHub - Responsive Admin Dashboard</h3>
-					<div class="tech">
-						<span>html</span>
-						<span>css</span>
-						<span>javascript</span>
-					</div>
-				</a>
-				<a href="https://fajarnurwahid.github.io/smartify/" class="work" target="_blank">
-					<img src="img/smartify.webp" alt="Smartify">
-					<h3>Smartify - Responsive Landing Page</h3>
-					<div class="tech">
-						<span>html</span>
-						<span>css</span>
-						<span>javascript</span>
-					</div>
-				</a>
-				<a href="https://fajarnurwahid.github.io/porto/" class="work" target="_blank">
-					<img src="img/porto.webp" alt="Porto">
-					<h3>Porto - Responsive Portfolio Website</h3>
-					<div class="tech">
-						<span>html</span>
-						<span>css</span>
-						<span>javascript</span>
-					</div>
-				</a>
-			</div>
-		</div>
-	</section>
-	<!-- WORKS -->
+    <!-- MY WORKS -->
+    <section id="works">
+        <div class="container">
+            <h2 class="section-title">My Works</h2>
+            <div class="work-wrapper">
+                <div class="work-item">
+                    <div class="work-item-image-wrapper">
+                        <img src="img/fashion.webp" class="work-item-image" alt="Fashion">
+                    </div>
+                    <a href="https://fashion-tailwindcss.netlify.app/" class="work-item-link">Fashion - Responsive Fashion Landing Page</a>
+                    <div class="work-item-tech">
+                        <span class="work-item-tech-item">html</span>
+                        <span class="work-item-tech-item">tailwind css</span>
+                        <span class="work-item-tech-item">javascript</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-item-image-wrapper">
+                        <img src="img/dotour.webp" class="work-item-image" alt="DoTour">
+                    </div>
+                    <a href="https://fajarnurwahid.github.io/dotour/" class="work-item-link">DoTour - Responsive Travel Landing Page</a>
+                    <div class="work-item-tech">
+                        <span class="work-item-tech-item">html</span>
+                        <span class="work-item-tech-item">css</span>
+                        <span class="work-item-tech-item">javascript</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-item-image-wrapper">
+                        <img src="img/resto.webp" class="work-item-image" alt="Resto">
+                    </div>
+                    <a href="https://fajarnurwahid.github.io/resto/" class="work-item-link">Resto - Responsive Restaurant Landing Page</a>
+                    <div class="work-item-tech">
+                        <span class="work-item-tech-item">html</span>
+                        <span class="work-item-tech-item">css</span>
+                        <span class="work-item-tech-item">javascript</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-item-image-wrapper">
+                        <img src="img/adminweb.webp" class="work-item-image" alt="Adminweb">
+                    </div>
+                    <a href="https://fajarnurwahid.github.io/adminweb/" class="work-item-link">Adminweb - Responsive Admin Dashboard</a>
+                    <div class="work-item-tech">
+                        <span class="work-item-tech-item">html</span>
+                        <span class="work-item-tech-item">css</span>
+                        <span class="work-item-tech-item">javascript</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-item-image-wrapper">
+                        <img src="img/bloga.webp" class="work-item-image" alt="Bloga">
+                    </div>
+                    <a href="https://fajarnurwahid.github.io/bloga/" class="work-item-link">Bloga - Responsive Blog Website</a>
+                    <div class="work-item-tech">
+                        <span class="work-item-tech-item">html</span>
+                        <span class="work-item-tech-item">css</span>
+                        <span class="work-item-tech-item">javascript</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-item-image-wrapper">
+                        <img src="img/adminsite.webp" class="work-item-image" alt="Adminsite">
+                    </div>
+                    <a href="https://fajarnurwahid.github.io/admin-site/" class="work-item-link">Adminsite - Responsive Admin Dashboard</a>
+                    <div class="work-item-tech">
+                        <span class="work-item-tech-item">html</span>
+                        <span class="work-item-tech-item">css</span>
+                        <span class="work-item-tech-item">javascript</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-item-image-wrapper">
+                        <img src="img/adminhub.webp" class="work-item-image" alt="Adminhub">
+                    </div>
+                    <a href="https://fajarnurwahid.github.io/adminhub/" class="work-item-link">Adminhub - Responsive Admin Dashboard</a>
+                    <div class="work-item-tech">
+                        <span class="work-item-tech-item">html</span>
+                        <span class="work-item-tech-item">css</span>
+                        <span class="work-item-tech-item">javascript</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-item-image-wrapper">
+                        <img src="img/smartify.webp" class="work-item-image" alt="Smartify">
+                    </div>
+                    <a href="https://fajarnurwahid.github.io/smartify/" class="work-item-link">Smartify - Responsive Course Landing Page</a>
+                    <div class="work-item-tech">
+                        <span class="work-item-tech-item">html</span>
+                        <span class="work-item-tech-item">css</span>
+                        <span class="work-item-tech-item">javascript</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-item-image-wrapper">
+                        <img src="img/porto.webp" class="work-item-image" alt="Porto">
+                    </div>
+                    <a href="https://fajarnurwahid.github.io/porto/" class="work-item-link">Porto - Responsive Personal Website</a>
+                    <div class="work-item-tech">
+                        <span class="work-item-tech-item">html</span>
+                        <span class="work-item-tech-item">css</span>
+                        <span class="work-item-tech-item">javascript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- MY WORKS -->
 
-	<!-- SKILLS -->
-	<section id="skills">
-		<div class="container">
-			<h1 class="title">Skills</h1>
-			<div class="skills">
-				<div class="skill"><i class="bx bxl-html5"></i></div>
-				<div class="skill"><i class="bx bxl-css3"></i></div>
-				<div class="skill"><i class="bx bxl-javascript"></i></div>
-				<div class="skill"><i class="bx bxl-tailwind-css"></i></div>
-				<div class="skill"><i class="bx bxl-sass"></i></div>
-				<div class="skill"><i class="bx bxl-bootstrap"></i></div>
-				<div class="skill"><i class="bx bxl-django"></i></div>
-			</div>
-		</div>
-	</section>
-	<!-- SKILLS -->
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skill-wrapper">
+                <div class="skill-item blue">
+                    <div class="skill-item-icon">
+                        <i class='bx bxl-html5' ></i>
+                    </div>
+                    <h3 class="skill-item-title">HTML</h3>
+                </div>
+                <div class="skill-item green">
+                    <div class="skill-item-icon">
+                        <i class='bx bxl-css3' ></i>
+                    </div>
+                    <h3 class="skill-item-title">CSS</h3>
+                </div>
+                <div class="skill-item orange">
+                    <div class="skill-item-icon">
+                        <i class='bx bxl-javascript' ></i>
+                    </div>
+                    <h3 class="skill-item-title">Javascript</h3>
+                </div>
+                <div class="skill-item blue">
+                    <div class="skill-item-icon">
+                        <i class='bx bxl-tailwind-css' ></i>
+                    </div>
+                    <h3 class="skill-item-title">Tailwind CSS</h3>
+                </div>
+                <div class="skill-item green">
+                    <div class="skill-item-icon">
+                        <i class='bx bxl-django' ></i>
+                    </div>
+                    <h3 class="skill-item-title">Django</h3>
+                </div>
+                <div class="skill-item orange">
+                    <div class="skill-item-icon">
+                        <i class='bx bxl-bootstrap' ></i>
+                    </div>
+                    <h3 class="skill-item-title">Bootstrap</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SKILLS -->
 
-	<!-- CERTIFICATE -->
-	<section id="certificate">
-		<div class="container">
-			<!-- Swiper -->
-			<div class="swiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<img src="img/1.webp" alt="">
-					</div>
-					<div class="swiper-slide">
-						<img src="img/2.webp" alt="">
-					</div>
-					<div class="swiper-slide">
-						<img src="img/3.webp" alt="">
-					</div>
-					<div class="swiper-slide">
-						<img src="img/4.webp" alt="">
-					</div>
-					<div class="swiper-slide">
-						<img src="img/5.webp" alt="">
-					</div>
-					<div class="swiper-slide">
-						<img src="img/6.webp" alt="">
-					</div>
-					<div class="swiper-slide">
-						<img src="img/7.webp" alt="">
-					</div>
-				</div>
-				<!-- Add Pagination -->
-				<div class="swiper-pagination"></div>
-				<!-- Add Arrows -->
-			    <div class="swiper-button-next"></div>
-			    <div class="swiper-button-prev"></div>
-			</div>
-		</div>
-	</section>
-	<!-- CERTIFICATE -->
+    <!-- CERTIFICATES -->
+    <section id="certificates">
+        <div class="container">
+            <h2 class="section-title">Certificates</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper certificate-wrapper">
+                    <div class="swiper-slide certificate-item">
+                        <img src="img/1.webp" alt="">
+                    </div>
+                    <div class="swiper-slide certificate-item">
+                        <img src="img/2.webp" alt="">
+                    </div>
+                    <div class="swiper-slide certificate-item">
+                        <img src="img/3.webp" alt="">
+                    </div>
+                    <div class="swiper-slide certificate-item">
+                        <img src="img/4.webp" alt="">
+                    </div>
+                    <div class="swiper-slide certificate-item">
+                        <img src="img/5.webp" alt="">
+                    </div>
+                    <div class="swiper-slide certificate-item">
+                        <img src="img/6.webp" alt="">
+                    </div>
+                    <div class="swiper-slide certificate-item">
+                        <img src="img/7.webp" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </div>
+    </section>
 
-	<!-- HIRE ME -->
-	<section id="hire-me">
-		<div class="container">
-			<div class="wrapper">
-				<h1>Let's connect and collaborate</h1>
-				<a href="https://www.fiverr.com/fajar_nur_wahid?up_rollout=true" class="btn-cta">Hire Me</a>
-			</div>
-		</div>
-	</section>
-	<!-- HIRE ME -->
+    <div class="certificate-modal">
+        <div class="certificate-modal-inner">
+            <img src="img/1.webp" alt="" class="certificate-modal-image">
+        </div>
+    </div>
+    <!-- CERTIFICATES -->
+    
+    <!-- COLLABORATE -->
+    <section>
+        <div class="container">
+            <div class="collaborate-wrapper">
+                <h2 class="collaborate-title">Let's collaborate with me</h2>
+                <a href="https://www.fiverr.com/fajar_nur_wahid?up_rollout=true" class="btn btn-blue">My Services</a>
+            </div>
+        </div>
+    </section>
+    <!-- COLLABORATE -->
 
-	<!-- FOOTER -->
-	<footer>
-		<div class="container">
-			<a href="#" class="logo"><img src="img/logo_white.png" alt="Logo"></a>
-			<p>Created By Fajar Nur Wahid</p>
-		</div>
-	</footer>
-	<!-- FOOTER -->
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper">
+                <a href="#" class="footer-logo">
+                    <img src="img/logo_white.webp" alt="Logo White">
+                </a>
+                <p class="footer-created">Created By <span>Fajar Nur Wahid</span></p>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER -->
+    
 
-	<!-- LOADER -->
-	<div class="loader"></div>
-	<!-- LOADER -->
-	
-	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-	<script src="script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

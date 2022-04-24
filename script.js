@@ -1,55 +1,81 @@
-const nav = document.querySelector('nav');
-const toggleMenu = document.querySelector('.toggle-menu');
-const navMenu = document.querySelector('nav .nav-menu');
-const linkMenu = navMenu.querySelectorAll('li a');
-const allSection = document.querySelectorAll('header, section');
+// NAVBAR
+const navbarMenuWrapper = document.querySelector('.navbar-menu-wrapper')
+const navbarToggle = document.querySelector('.navbar-menu-toggle')
 
-if(window.scrollY > 20) {
-	nav.classList.add('active');
+navbarToggle.addEventListener('click', function() {
+    navbarMenuWrapper.classList.toggle('show')
+    document.body.classList.toggle('no-scroll', navbarMenuWrapper.classList.contains('show'))
+})
+
+
+
+
+
+
+
+// CERTIFICATE
+const certificateImages = document.querySelectorAll('.certificate-item img')
+const certificateModal = document.querySelector('.certificate-modal')
+const certificateModalImage = certificateModal.querySelector('.certificate-modal-image')
+
+certificateImages.forEach(image=> {
+    image.addEventListener('click', function() {
+        certificateModalImage.src = this.src
+        certificateModal.classList.add('show')
+        document.body.classList.add('no-scroll')
+    })
+})
+
+
+
+
+
+
+
+// MODE
+const toggleMode = document.querySelector('.navbar-mode-checkbox')
+
+if(localStorage.getItem('theme')) {
+    const isChecked = localStorage.getItem('theme') == 'dark'
+    document.body.parentNode.dataset.theme = localStorage.getItem('theme')
+    toggleMode.checked = isChecked
 } else {
-	nav.classList.remove('active');
+    document.body.parentNode.dataset.theme = 'light'
 }
 
-allSection.forEach(section=> {
-	const y = section.offsetTop;
-	const h = section.offsetHeight;
-
-	if(window.scrollY >= (y-64) && window.scrollY <= (y+h)) {
-		linkMenu.forEach(link=> {
-			if(link.getAttribute('href').slice(1) == section.id) {
-				link.classList.add('active');
-			} else {
-				link.classList.remove('active');
-			}
-		})
-	}
+toggleMode.addEventListener('change', function() {
+    const value = this.checked ? 'dark' : 'light'
+    document.body.parentNode.dataset.theme = value
+    localStorage.setItem('theme', value)
 })
 
 
 
-window.addEventListener('click', function (e) {
-	if(navMenu.classList.contains('show') && e.target != toggleMenu) {
-		if(e.target != navMenu) {
-			navMenu.classList.remove('show')
-		}
-	}
+
+
+
+
+// WINDOW
+const navbar = document.querySelector('nav')
+const sections = document.querySelectorAll('header, section')
+const navbarLinks = document.querySelectorAll('.navbar-menu-item')
+
+navbarLinks.forEach(link=> {
+    link.addEventListener('click', function() {
+        navbarMenuWrapper.classList.remove('show')
+        document.body.classList.toggle('no-scroll', navbarMenuWrapper.classList.contains('show'))
+    })
 })
 
-window.addEventListener('scroll', function () {
-	if(!navMenu.classList.contains('show')) {
-		if(this.scrollY > 20) {
-			nav.classList.add('active');
-		} else {
-			nav.classList.remove('active');
-		}
-	}
+window.addEventListener('scroll', function() {
+    navbar.classList.toggle('shadow', window.scrollY > 20)
 
-	allSection.forEach(section=> {
+    sections.forEach(section=> {
 		const y = section.offsetTop;
 		const h = section.offsetHeight;
 
 		if(this.scrollY >= (y-64) && this.scrollY <= (y+h)) {
-			linkMenu.forEach(link=> {
+			navbarLinks.forEach(link=> {
 				if(link.getAttribute('href').slice(1) == section.id) {
 					link.classList.add('active');
 				} else {
@@ -60,37 +86,33 @@ window.addEventListener('scroll', function () {
 	})
 })
 
-
-const loader = document.querySelector('.loader');
-
-window.addEventListener('load', function () {
-	loader.classList.add('hide')	;
-})
-
-
-toggleMenu.addEventListener('click', function () {
-	navMenu.classList.toggle('show');
-})
-
-linkMenu.forEach(link=> {
-	link.addEventListener('click', function () {
-		navMenu.classList.remove('show');
-	})
+window.addEventListener('click', function(e) {
+    if(e.target.matches('.certificate-modal')) {
+        certificateModal.classList.remove('show')
+        document.body.classList.remove('no-scroll')
+    }
 })
 
 
 
 
-let swiper = new Swiper('.swiper', {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+
+
+
+// SWIPER
+let swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        }
+    }
 });
