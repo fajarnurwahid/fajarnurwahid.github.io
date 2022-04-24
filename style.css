@@ -161,7 +161,7 @@ body.no-scroll {
 section,
 header {
     padding: 5rem 0;
-    scroll-padding-top: 2rem;
+    scroll-margin-top: 2rem;
 }
 .container {
     width: 100%;
